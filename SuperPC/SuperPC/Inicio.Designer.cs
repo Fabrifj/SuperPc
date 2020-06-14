@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblConexion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRegsitro = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblConexion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(103, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "holaa";
+            this.lblConexion.AutoSize = true;
+            this.lblConexion.Location = new System.Drawing.Point(614, 41);
+            this.lblConexion.Name = "lblConexion";
+            this.lblConexion.Size = new System.Drawing.Size(48, 20);
+            this.lblConexion.TabIndex = 0;
+            this.lblConexion.Text = "holaa";
             // 
             // label2
             // 
@@ -92,7 +92,7 @@
             this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnRegsitro);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblConexion);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Inicio";
             this.Text = "Form1";
@@ -104,7 +104,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblConexion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRegsitro;
         private System.Windows.Forms.Button btnVentas;
