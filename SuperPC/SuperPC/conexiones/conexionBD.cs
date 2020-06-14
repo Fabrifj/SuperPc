@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace SuperPC.conexiones
 {
-    class conexionBD
+    public class conexionBD
     {
         private string cadena;
 

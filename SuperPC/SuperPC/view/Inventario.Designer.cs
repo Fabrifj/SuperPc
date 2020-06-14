@@ -69,9 +69,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Inicio";
+            this.label2.Text = "Inventario";
             // 
             // Inventario
             // 
@@ -84,6 +84,7 @@
             this.Controls.Add(this.btnPedido);
             this.Name = "Inventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

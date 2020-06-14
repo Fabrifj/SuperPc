@@ -7,17 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SuperPC.controller;
 
-namespace SuperPC
+
+
+namespace SuperPC.view
 {
-    public partial class Ventas : Form
+    public partial class Compra : Form
     {
-        public Ventas()
+        Consultas controllSQL;
+        public Compra(Consultas controllSQL)
         {
             InitializeComponent();
+            this.controllSQL = controllSQL;
         }
 
-        private void Ventas_Load(object sender, EventArgs e)
+        private void Compra_Load(object sender, EventArgs e)
         {
 
         }

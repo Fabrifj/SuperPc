@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using SuperPC.conexiones;
+using SuperPC.controller;
 
 namespace SuperPC
 {
@@ -18,15 +19,20 @@ namespace SuperPC
         string direccion = "DESKTOP-BC8ISUO";
         string bd = "Militares";
         string security = "True";
+
+        Consultas controllSQL;
         
 
-       
 
         public Inicio()
         {
             InitializeComponent();
+            // Creamos conexion 
             conexionBD miConexion = new conexionBD(direccion, bd, security);
             //miConexion.abrir(lblConexion);
+
+            //Creamos Consultas
+            Consultas Consultas = new Consultas(miConexion);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,15 +45,18 @@ namespace SuperPC
         // Botonoes 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Ventas ventas = new Ventas();
+            Ventas ventas = new Ventas(this.controllSQL);
+            ventas.ShowDialog();
         }
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            Inventario inventario = new Inventario();
+            Inventario inventario = new Inventario(this.controllSQL);
+            inventario.ShowDialog();
         }
         private void btnRegsitro_Click(object sender, EventArgs e)
         {
-            Registro registro = new Registro();
+            Registro registro = new Registro(this.controllSQL);
+            registro.ShowDialog();
         }
     }
 }

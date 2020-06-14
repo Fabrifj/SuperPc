@@ -62,6 +62,7 @@
             this.btnCliente.TabIndex = 3;
             this.btnCliente.Text = "añadir Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnProducto
             // 
@@ -71,6 +72,7 @@
             this.btnProducto.TabIndex = 4;
             this.btnProducto.Text = "añadir Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // btnComprar
             // 
@@ -80,6 +82,7 @@
             this.btnComprar.TabIndex = 5;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // lblNombre
             // 
