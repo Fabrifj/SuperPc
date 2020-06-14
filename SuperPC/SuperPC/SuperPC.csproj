@@ -52,6 +52,7 @@
     <Compile Include="Agregar.Designer.cs">
       <DependentUpon>Agregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="conexiones\conexionBD.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
