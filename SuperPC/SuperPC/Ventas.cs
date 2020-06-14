@@ -10,19 +10,16 @@ using System.Windows.Forms;
 
 namespace SuperPC
 {
-    public partial class Form1 : Form
+    public partial class Ventas : Form
     {
-        public Form1()
+        public Ventas()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Ventas_Load(object sender, EventArgs e)
         {
-            //Funciono Puto
 
-            //Funciono Puto  o
-            // okey rey
         }
     }
 }
