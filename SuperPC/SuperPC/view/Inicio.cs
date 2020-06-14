@@ -20,6 +20,7 @@ namespace SuperPC
         string bd = "Militares";
         string security = "True";
 
+        // Consultor Metodo de Consultas
         Consultas controllSQL;
         
 
