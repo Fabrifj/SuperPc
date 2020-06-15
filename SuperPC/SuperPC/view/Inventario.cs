@@ -25,7 +25,7 @@ namespace SuperPC
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            ManejoDatos manejoDatos = new ManejoDatos("Produto", controllSQL);
+            ManejoDatos manejoDatos = new ManejoDatos("PRODUCTO", controllSQL);
             manejoDatos.ShowDialog();
         }
 
@@ -38,7 +38,7 @@ namespace SuperPC
 
         private void btnProvedor_Click(object sender, EventArgs e)
         {
-            ManejoDatos manejoDatos = new ManejoDatos("Provedor", controllSQL);
+            ManejoDatos manejoDatos = new ManejoDatos("PROVEEDOR", controllSQL);
             manejoDatos.ShowDialog();
         }
 

@@ -15,6 +15,9 @@ namespace SuperPC
 {
     public partial class ManejoDatos : Form
     {
+        // auxi consultas 
+        private DataTable data;
+
         Consultas controllSQL;
         string titulo;
         public ManejoDatos(string titulo, Consultas controllSQL)
@@ -40,7 +43,9 @@ namespace SuperPC
 
         private void ManejoDatos_Load(object sender, EventArgs e)
         {
+            data = controllSQL.select_Simple(titulo);
 
+            dgv_Datos.DataSource = data;
         }
     }
 }

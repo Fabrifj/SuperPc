@@ -18,7 +18,7 @@ namespace SuperPC
     {
         Consultas consultas;
 
-        public Consultas Consultas { get; set; }
+        
         public Ventas(Consultas consultas)
         {
             InitializeComponent();
@@ -32,13 +32,14 @@ namespace SuperPC
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            AñadirDatos añadirDatos = new AñadirDatos("Cliente", consultas);
+            AñadirDatos añadirDatos = new AñadirDatos("CLIENTE", consultas);
+            lblNombre.Text= añadirDatos.Dato1;
             añadirDatos.ShowDialog();
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            AñadirDatos añadirDatos = new AñadirDatos("Producto", consultas);
+            AñadirDatos añadirDatos = new AñadirDatos("PRODUCTO", consultas);
             añadirDatos.ShowDialog();
         }
 

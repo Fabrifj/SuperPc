@@ -64,7 +64,33 @@ namespace SuperPC.controller
             miConexion.cerrar();
             return matriz;
         }
+        public DataTable select_Simple_Limitado(string tabla, string limitante, string limitador,string[] columnas = null)
+        {
+            miConexion.abrir();
+            DataTable matriz = new DataTable();
+            campos = "";
 
+            try
+            {
+                //Si columnas no esta vacio se crea un string que contenga todos los strings de columnas
+                if (columnas != null)
+                    for (int i = 0; i < columnas.Length; i++) campos = agregar(campos, columnas[i]);
+                else
+                    campos = "*"; //Si esta vacio se coloca un * para seleccionar todos los campos
+
+                consulta = string.Format("SELECT {0} FROM {1} WHERE {2} = {3} ", campos, tabla, limitante, limitador);
+                comando = new SqlCommand(consulta, miConexion.conectarbd);
+                datos = new SqlDataAdapter(comando);
+                datos.Fill(matriz);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
+            miConexion.cerrar();
+            return matriz;
+        }
         public DataTable select_Limitante(string tabla, string tabla_Limitadora, string limitador, string[] columnas = null)
         {
             miConexion.abrir();

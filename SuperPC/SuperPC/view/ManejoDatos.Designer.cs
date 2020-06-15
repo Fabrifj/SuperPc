@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnTerminar = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
+            this.dgv_Datos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(14, 121);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(601, 304);
-            this.textBox2.TabIndex = 2;
             // 
             // label1
             // 
@@ -81,30 +74,41 @@
             this.btnAñadir.UseVisualStyleBackColor = true;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
+            // dgv_Datos
+            // 
+            this.dgv_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Datos.Location = new System.Drawing.Point(1, 133);
+            this.dgv_Datos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_Datos.Name = "dgv_Datos";
+            this.dgv_Datos.RowHeadersWidth = 51;
+            this.dgv_Datos.RowTemplate.Height = 24;
+            this.dgv_Datos.Size = new System.Drawing.Size(636, 317);
+            this.dgv_Datos.TabIndex = 21;
+            // 
             // ManejoDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgv_Datos);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
             this.Name = "ManejoDatos";
             this.Text = "ManejoDatos";
             this.Load += new System.EventHandler(this.ManejoDatos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnTerminar;
         private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.DataGridView dgv_Datos;
     }
 }
