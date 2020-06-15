@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace SuperPC.conexiones
 {
@@ -21,19 +21,15 @@ namespace SuperPC.conexiones
             conectarbd.ConnectionString = cadena;
         }
 
-        public void abrir(System.Windows.Forms.Label lblConexion)
+        public void abrir()
         {
             try
             {
                 conectarbd.Open();
-                Console.WriteLine("Se conecto Correctamente");
-                lblConexion.Text = "Se conecto Correctamente";
-
             }
-            catch
+            catch(Exception error)
             {
-                Console.WriteLine("Error al abrir BD");
-                lblConexion.Text = "Error al abrir BD";
+                MessageBox.Show(error.Message);
             }
         }
         public void cerrar()

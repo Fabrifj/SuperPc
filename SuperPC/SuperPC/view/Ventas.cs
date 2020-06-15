@@ -22,7 +22,7 @@ namespace SuperPC
         public Ventas(Consultas consultas)
         {
             InitializeComponent();
-            Consultas = consultas;
+            this.consultas = consultas;
         }
 
         private void Ventas_Load(object sender, EventArgs e)

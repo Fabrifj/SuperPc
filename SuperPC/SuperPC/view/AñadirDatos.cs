@@ -17,6 +17,13 @@ namespace SuperPC.view
     public partial class AñadirDatos : Form
     {
         string titulo;
+
+        private string[] campos;
+        private DataTable data;
+
+        List<string> categorias;
+        List<string> primaryKey;
+
         Consultas controllSQL;
         public AñadirDatos(string titulo, Consultas controllSQL)
         {
@@ -44,7 +51,29 @@ namespace SuperPC.view
 
         private void AñadirDatos_Load(object sender, EventArgs e)
         {
+            data = controllSQL.select_Simple("CATEGORIA");
 
+            categorias = new List<string>(); //En esta lista se guarda las descripciones que vayamos a obtener de categoria
+            primaryKey = new List<string>(); //En esta sus codigos
+
+            for(int i = 0; i < data.Rows.Count; i++)
+            {
+                string descripcion = data.Rows[i]["DESCRIPCION"].ToString();
+                categorias.Add(descripcion);
+                string key = data.Rows[i]["CODIGO_CATEGORIA"].ToString();//Rows[fila][columna]
+                primaryKey.Add(key);
+            }
+
+            comboBox1.DataSource = categorias;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBox1.SelectedIndex; //Se obtinene el indice del comboBox seleccionado
+            campos = new string[] { "ID_PRODUCTO", "MARCA", "DESCRIPCION", "PRECIO", "STOCK" }; //Se definen los campos requeridos
+            data = controllSQL.select_Limitante("PRODUCTO", "CATEGORIA", primaryKey[index], campos);
+
+            dgv_Productos.DataSource = data;
         }
     }
 }

@@ -72,6 +72,12 @@
     <Compile Include="view\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Insertar_Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Insertar_Datos.Designer.cs">
+      <DependentUpon>Insertar_Datos.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Insertar_Datos.resx">
+      <DependentUpon>Insertar_Datos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>

@@ -32,8 +32,9 @@ namespace SuperPC
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            Agregar agregar = new Agregar(titulo, controllSQL);
-            agregar.ShowDialog();
+            controllSQL.insertar_Manual("PRODUCTO", false);
+            //Agregar agregar = new Agregar(titulo, controllSQL);
+            //agregar.ShowDialog();
 
         }
 

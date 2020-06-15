@@ -16,32 +16,26 @@ namespace SuperPC
     public partial class Inicio : Form
     {
         // Llaves Para la base de datos 
-        string direccion = "DESKTOP-BC8ISUO";
-        string bd = "Militares";
+        string direccion = ".";
+        string bd = "SuperPC";
         string security = "True";
 
         Consultas controllSQL;
-        
-
 
         public Inicio()
         {
             InitializeComponent();
             // Creamos conexion 
             conexionBD miConexion = new conexionBD(direccion, bd, security);
-            //miConexion.abrir(lblConexion);
 
             //Creamos Consultas
-            Consultas Consultas = new Consultas(miConexion);
+            this.controllSQL = new Consultas(miConexion);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
-
-
-
         // Botonoes 
         private void btnVentas_Click(object sender, EventArgs e)
         {
