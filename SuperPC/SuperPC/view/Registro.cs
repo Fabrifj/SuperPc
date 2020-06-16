@@ -21,14 +21,18 @@ namespace SuperPC
     {
         // auxi consultas 
         private DataTable data;
+        private string titulo;
         
 
 
         Consultas controllSQL;
-        public Registro(Consultas controllSQL)
+        public Registro(Consultas controllSQL,string titulo)
         {
             InitializeComponent();
             this.controllSQL = controllSQL;
+            this.titulo = titulo;
+            lblTitulo.Text = titulo;
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace SuperPC
 
         private void Registro_Load(object sender, EventArgs e)
         {
-            data = controllSQL.select_Simple("VENTA");
+            data = controllSQL.select_Simple(titulo);
 
             dgv_Ventas.DataSource = data;
 
@@ -47,6 +51,19 @@ namespace SuperPC
             
         }
 
-        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string ID = txtID.Text;
+            data = controllSQL.select_Simple_Limitado("VENTA_PRODUCTO","CODIGO_VENTA",ID);
+
+            dgv_Ventas.DataSource = data;
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            data = controllSQL.select_Simple(titulo);
+
+            dgv_Ventas.DataSource = data;
+        }
     }
 }

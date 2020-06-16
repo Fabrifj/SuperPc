@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgv_Ventas = new System.Windows.Forms.DataGridView();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnReiniciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Regristo";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(69, 20);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Regristo";
             // 
             // btnCerrar
             // 
@@ -64,14 +68,54 @@
             this.dgv_Ventas.Size = new System.Drawing.Size(802, 288);
             this.dgv_Ventas.TabIndex = 21;
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(98, 114);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(203, 26);
+            this.txtID.TabIndex = 22;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(12, 120);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(26, 20);
+            this.lblId.TabIndex = 23;
+            this.lblId.Text = "ID";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(339, 114);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 34);
+            this.btnBuscar.TabIndex = 24;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.Location = new System.Drawing.Point(666, 106);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(90, 34);
+            this.btnReiniciar.TabIndex = 25;
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnReiniciar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.dgv_Ventas);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Name = "Registro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
@@ -82,8 +126,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgv_Ventas;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnReiniciar;
     }
 }
