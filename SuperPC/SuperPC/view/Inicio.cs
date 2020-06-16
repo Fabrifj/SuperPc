@@ -50,7 +50,7 @@ namespace SuperPC
         }
         private void btnRegsitro_Click(object sender, EventArgs e)
         {
-            Registro registro = new Registro(this.controllSQL);
+            Registro registro = new Registro(this.controllSQL,"VENTA");
             registro.ShowDialog();
         }
     }

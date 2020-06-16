@@ -49,7 +49,7 @@ namespace SuperPC
             data = controllSQL.select_Hard_Code(db);
             try
             {
-                CODIGO_VENTA = data.Rows[0]["CODIGO"].ToString();
+                CODIGO_VENTA = Convert.ToString(Convert.ToInt32( data.Rows[0]["CODIGO"].ToString()) +1);
                 lblCodigo.Text = " Numero de venta " + CODIGO_VENTA;
 
             }
@@ -77,6 +77,18 @@ namespace SuperPC
             txtbVentas.Text = resumen;
 
 
+            DateTime fecha1 = System.DateTime.Today;
+            
+            string fecha = Convert.ToString(System.DateTime.Today.Month) +"/" + Convert.ToString(System.DateTime.Today.Day)
+                + "/" + Convert.ToString(System.DateTime.Today.Year);
+            string[] values = {fecha,"0", id_cliente };
+            //controllSQL.insertar("VENTA", values);
+            
+            
+           
+            string consulta = string.Format("insert into VENTA values({0})",values);
+            controllSQL.consulta_Hard_Code(consulta);
+            
 
         }
 
@@ -94,11 +106,7 @@ namespace SuperPC
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            string fecha = Convert.ToString(System.DateTime.Today); 
-
-            string[] values = { CODIGO_VENTA, fecha ,Convert.ToString(costo), id_cliente };
-
-            controllSQL.insertar("VENTA", values);
+            // modificar el precio final 
             this.Close();
         }
     }
