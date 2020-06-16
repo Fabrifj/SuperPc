@@ -137,7 +137,7 @@ namespace SuperPC.controller
                 comando = new SqlCommand(consulta, miConexion.conectarbd);
                 datos = new SqlDataAdapter(comando);
                 datos.Fill(matriz);
-                MessageBox.Show("TODO BIEN");
+             
             }
             catch(Exception error)
             {
@@ -221,12 +221,13 @@ namespace SuperPC.controller
             //Se realiza la consulta
             try
             {
-                consulta = string.Format("INSERT INTO {0} VALUES({1})", tabla, inserciones);
+                consulta = string.Format("INSERT INTO {0} VALUES ({1})", tabla, inserciones);
                 comando = new SqlCommand(consulta, miConexion.conectarbd);
                 comando.ExecuteReader();
 
             }catch(Exception error)
             {
+                MessageBox.Show(inserciones);
                 MessageBox.Show(error.Message);
             }
 

@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbVentas = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNit = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtbVentas
             // 
-            this.textBox2.Location = new System.Drawing.Point(0, 166);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(601, 283);
-            this.textBox2.TabIndex = 1;
+            this.txtbVentas.Location = new System.Drawing.Point(0, 166);
+            this.txtbVentas.Multiline = true;
+            this.txtbVentas.Name = "txtbVentas";
+            this.txtbVentas.Size = new System.Drawing.Size(601, 283);
+            this.txtbVentas.TabIndex = 1;
             // 
             // label1
             // 
@@ -102,18 +103,28 @@
             this.lblNit.TabIndex = 7;
             this.lblNit.Text = "Nit // id";
             // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(147, 18);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(52, 20);
+            this.lblCodigo.TabIndex = 8;
+            this.lblCodigo.Text = "Venta";
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNit);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtbVentas);
             this.Name = "Ventas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.Ventas_Load);
@@ -124,12 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbVentas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblNit;
+        private System.Windows.Forms.Label lblCodigo;
     }
 }
