@@ -78,13 +78,13 @@ namespace SuperPC
             txtbVentas.Text = resumen;
 
 
-            DateTime fecha1 = System.DateTime.Today;
+            
             
             string fecha = Convert.ToString(System.DateTime.Today.Month) +"/" + Convert.ToString(System.DateTime.Today.Day)
                 + "/" + Convert.ToString(System.DateTime.Today.Year);
             lblNit.Text = fecha;
             string[] values = {"'" + fecha + "'", "1", id_cliente };
-            //controllSQL.insertar("VENTA", values);
+            
             
             
            
@@ -109,6 +109,8 @@ namespace SuperPC
         private void btnComprar_Click(object sender, EventArgs e)
         {
             // modificar el precio final 
+            string consulta = string.Format("UPDATE VENTA SET TOTAL = {0} WHERE CODIGO_VENTA = {1} ", costo,CODIGO_VENTA);
+            controllSQL.consulta_Hard_Code(consulta);
             this.Close();
         }
     }
