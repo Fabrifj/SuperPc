@@ -137,6 +137,7 @@ namespace SuperPC.controller
                 comando = new SqlCommand(consulta, miConexion.conectarbd);
                 datos = new SqlDataAdapter(comando);
                 datos.Fill(matriz);
+                MessageBox.Show("TODO BIEN");
             }
             catch(Exception error)
             {

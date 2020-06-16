@@ -17,9 +17,10 @@ namespace SuperPC.view
     public partial class AñadirDatos : Form
     {
         // variables enviables
-        string id="";
+        string ID_CLIENTE="";
+        string ID_PRODUCTO = "";
         //
-       
+
         public string Dato1 { get; set; }
         public string Dato2 { get; set; }
         public string Dato3 { get; set; }
@@ -45,26 +46,33 @@ namespace SuperPC.view
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            id=txtId.Text;
+            lblDato1.Text = "liSTO";
+
             if (titulo == "CLIENTE")
             {
-                data = controllSQL.select_Simple_Limitado(titulo, "ID_CLIENTE", id);
-
+                ID_CLIENTE = txtId.Text;
                 campos = new string[] { "NOMBRE_CLIENTE", "CARNET"};
-                data = controllSQL.select_Simple_Limitado(titulo,"ID_CLIENTE",id, campos);
+                data = controllSQL.select_Simple_Limitado(titulo,"ID_CLIENTE", ID_CLIENTE, campos);
                 Dato1 = data.Rows[0]["NOMBRE_CLIENTE"].ToString();
                 Dato2 = data.Rows[0]["CARNET"].ToString();
                 lblDato1.Text = Dato1;
                 dgv_Productos.DataSource = data;
-            }
-            else
-            {
+            } 
+
+            if (titulo == "PRODUCTO"){
+                ID_PRODUCTO = txtId.Text;
+                lblDato1.Text = "liSTO";
                 
-                //dgv_Productos.DataSource = data
+                campos = new string[] { "ID_PRODUCTO", "MARCA", "CATEGORIA.DESCRIPCION", "PRECIO", "STOCK" };
 
+                string db = string.Format("SELECT {0}  FROM PRODUCTO INNER JOIN CATEGORIA ON " +
+                    "PRODUCTO.CODIGO_CATEGORIA = CATEGORIA.CODIGO_CATEGORIA WHERE ID_PRODUCTO = '{1}'", campos, ID_PRODUCTO);
 
+                data = controllSQL.select_Hard_Code(db);
+
+                dgv_Productos.DataSource = data;
             }
-    }
+        }
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
@@ -107,6 +115,7 @@ namespace SuperPC.view
             data = controllSQL.select_Limitante("PRODUCTO", "CATEGORIA", primaryKey[index], campos);
 
             dgv_Productos.DataSource = data;
+
         }
     }
 }

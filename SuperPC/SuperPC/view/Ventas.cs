@@ -55,11 +55,8 @@ namespace SuperPC
         private void btnProducto_Click(object sender, EventArgs e)
         {
             AñadirDatos añadirDatos = new AñadirDatos("PRODUCTO", consultas);
-
-
-
-
             añadirDatos.ShowDialog();
+
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
