@@ -40,7 +40,7 @@
             // lbl_Columna
             // 
             this.lbl_Columna.AutoSize = true;
-            this.lbl_Columna.Location = new System.Drawing.Point(40, 94);
+            this.lbl_Columna.Location = new System.Drawing.Point(36, 61);
             this.lbl_Columna.Name = "lbl_Columna";
             this.lbl_Columna.Size = new System.Drawing.Size(46, 17);
             this.lbl_Columna.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // txt_Dato_Obtenido
             // 
-            this.txt_Dato_Obtenido.Location = new System.Drawing.Point(160, 94);
+            this.txt_Dato_Obtenido.Location = new System.Drawing.Point(128, 98);
             this.txt_Dato_Obtenido.Name = "txt_Dato_Obtenido";
             this.txt_Dato_Obtenido.Size = new System.Drawing.Size(169, 22);
             this.txt_Dato_Obtenido.TabIndex = 1;

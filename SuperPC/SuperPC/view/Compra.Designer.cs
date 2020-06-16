@@ -39,35 +39,37 @@
             // lblNit
             // 
             this.lblNit.AutoSize = true;
-            this.lblNit.Location = new System.Drawing.Point(305, 60);
+            this.lblNit.Location = new System.Drawing.Point(271, 48);
             this.lblNit.Name = "lblNit";
-            this.lblNit.Size = new System.Drawing.Size(56, 20);
+            this.lblNit.Size = new System.Drawing.Size(52, 17);
             this.lblNit.TabIndex = 14;
             this.lblNit.Text = "Nit // id";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(20, 60);
+            this.lblNombre.Location = new System.Drawing.Point(18, 48);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(147, 20);
+            this.lblNombre.Size = new System.Drawing.Size(132, 17);
             this.lblNombre.TabIndex = 13;
             this.lblNombre.Text = "Nombre del Cliente:";
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(639, 370);
+            this.btnComprar.Location = new System.Drawing.Point(586, 295);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(100, 39);
+            this.btnComprar.Size = new System.Drawing.Size(89, 31);
             this.btnComprar.TabIndex = 12;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
             // 
             // btnProducto
             // 
-            this.btnProducto.Location = new System.Drawing.Point(613, 122);
+            this.btnProducto.Location = new System.Drawing.Point(560, 98);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(156, 39);
+            this.btnProducto.Size = new System.Drawing.Size(139, 31);
             this.btnProducto.TabIndex = 11;
             this.btnProducto.Text = "añadir Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
@@ -75,31 +77,36 @@
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Location = new System.Drawing.Point(5, 7);
+            this.lbltitulo.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold);
+            this.lbltitulo.Location = new System.Drawing.Point(4, 6);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(65, 20);
+            this.lbltitulo.Size = new System.Drawing.Size(88, 36);
             this.lbltitulo.TabIndex = 9;
             this.lbltitulo.Text = "Compra";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(-7, 155);
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(7, 122);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(601, 283);
+            this.textBox2.Size = new System.Drawing.Size(535, 227);
             this.textBox2.TabIndex = 8;
             // 
             // Compra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.lblNit);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.textBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Compra";
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.Compra_Load);

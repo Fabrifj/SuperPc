@@ -30,6 +30,7 @@ namespace SuperPC
 
         private List<string> productos;
         private List<string> pk_Productos;
+        private List<string> stock;
 
         private List<string> proveedores;
         private List<string> pk_Proveedores;
@@ -51,17 +52,23 @@ namespace SuperPC
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             int index;
-
-            index = cmb_Producto.SelectedIndex;
-            string PK_ID_PRODUCTO = pk_Productos[index];
+            int index_P;
 
             index = cmb_Proveedor.SelectedIndex;
             string PK_ID_PROVEEDOR = pk_Proveedores[index];
+
+            index_P = cmb_Producto.SelectedIndex;
+            string PK_ID_PRODUCTO = pk_Productos[index_P];
 
             index = Convert.ToInt32(txt_Cantidad.Text) * Convert.ToInt32(txt_Costo.Text);
 
             valores = new string[] { "'" + PK_ID_PROVEEDOR + "'", "'" + PK_ID_PRODUCTO + "'", txt_Cantidad.Text, index.ToString() };
             controllSQL.insertar("COMPRA_STOCK", valores);
+
+            index_P = Convert.ToInt32(stock[index_P]) + Convert.ToInt32(txt_Cantidad.Text);
+            string update_Stock = string.Format("UPDATE PRODUCTO SET STOCK = {0} " +
+                "WHERE ID_PRODUCTO = '{1}'", index_P, PK_ID_PRODUCTO);
+            controllSQL.consulta_Hard_Code(update_Stock);
 
             cargar_Datos_DGV();
         }
@@ -110,11 +117,12 @@ namespace SuperPC
         {
             int index = cmb_Categoria.SelectedIndex;
 
-            campos = new string[] { "ID_PRODUCTO", "DESCRIPCION", "MARCA", "COSTO" };
+            campos = new string[] { "ID_PRODUCTO", "DESCRIPCION", "MARCA", "STOCK" };
             data = controllSQL.select_Limitante("PRODUCTO", "CATEGORIA", pk_Categorias[index], campos);
 
             productos = new List<string>();
             pk_Productos = new List<string>();
+            stock = new List<string>();
 
             for(int i = 0; i < data.Rows.Count; i++)
             {
@@ -123,6 +131,9 @@ namespace SuperPC
 
                 string key = data.Rows[i]["ID_PRODUCTO"].ToString();
                 pk_Productos.Add(key);
+
+                string stck = data.Rows[i]["STOCK"].ToString();
+                stock.Add(stck);
             }
 
             cmb_Producto.DataSource = productos;

@@ -37,17 +37,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(94, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Regristo";
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(692, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(601, 10);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(96, 33);
+            this.btnCerrar.Size = new System.Drawing.Size(99, 36);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -56,22 +58,23 @@
             // dgv_Ventas
             // 
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Ventas.Location = new System.Drawing.Point(-1, 161);
-            this.dgv_Ventas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_Ventas.Location = new System.Drawing.Point(-1, 129);
             this.dgv_Ventas.Name = "dgv_Ventas";
             this.dgv_Ventas.RowHeadersWidth = 51;
             this.dgv_Ventas.RowTemplate.Height = 24;
-            this.dgv_Ventas.Size = new System.Drawing.Size(802, 288);
+            this.dgv_Ventas.Size = new System.Drawing.Size(713, 230);
             this.dgv_Ventas.TabIndex = 21;
             // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.dgv_Ventas);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Registro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);

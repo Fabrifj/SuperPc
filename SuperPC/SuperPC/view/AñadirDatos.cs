@@ -109,8 +109,9 @@ namespace SuperPC.view
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Agregar agregar = new Agregar(titulo, controllSQL);
-            agregar.ShowDialog();
+            controllSQL.insertar_Manual(titulo, false);
+            data = controllSQL.select_Simple(titulo);
+            dgv_Productos.DataSource = data;
         }
 
         private void AñadirDatos_Load(object sender, EventArgs e)
@@ -122,6 +123,8 @@ namespace SuperPC.view
             
             if (titulo == "PRODUCTO")
             {
+                btnAñadirNuevo.Left = -100;
+
                 data = controllSQL.select_Simple("CATEGORIA");
                 for (int i = 0; i < data.Rows.Count; i++)
                 {
