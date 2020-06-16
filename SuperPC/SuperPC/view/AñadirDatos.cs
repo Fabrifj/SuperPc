@@ -46,8 +46,6 @@ namespace SuperPC.view
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            lblDato1.Text = "liSTO";
-
             if (titulo == "CLIENTE")
             {
                 ID_CLIENTE = txtId.Text;
@@ -59,14 +57,15 @@ namespace SuperPC.view
                 dgv_Productos.DataSource = data;
             } 
 
-            if (titulo == "PRODUCTO"){
+            if (titulo == "PRODUCTO")
+            {
                 ID_PRODUCTO = txtId.Text;
-                lblDato1.Text = "liSTO";
+                lblDato1.Text = "LISTO";
                 
-                campos = new string[] { "ID_PRODUCTO", "MARCA", "CATEGORIA.DESCRIPCION", "PRECIO", "STOCK" };
+                string valores = "ID_PRODUCTO, MARCA, CATEGORIA.DESCRIPCION, PRECIO, STOCK";
 
                 string db = string.Format("SELECT {0}  FROM PRODUCTO INNER JOIN CATEGORIA ON " +
-                    "PRODUCTO.CODIGO_CATEGORIA = CATEGORIA.CODIGO_CATEGORIA WHERE ID_PRODUCTO = '{1}'", campos, ID_PRODUCTO);
+                    "PRODUCTO.CODIGO_CATEGORIA = CATEGORIA.CODIGO_CATEGORIA WHERE ID_PRODUCTO = '{1}'", valores, ID_PRODUCTO);
 
                 data = controllSQL.select_Hard_Code(db);
 
