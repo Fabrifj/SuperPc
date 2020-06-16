@@ -33,7 +33,6 @@ namespace SuperPC
         {
             Agregar agregar = new Agregar("AGREGAR PEDIDOS", controllSQL);
             agregar.ShowDialog();
-
         }
 
         private void btnProvedor_Click(object sender, EventArgs e)
