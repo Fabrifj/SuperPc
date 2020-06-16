@@ -41,17 +41,19 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 25);
+            this.lblTitulo.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Location = new System.Drawing.Point(8, 10);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(69, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(94, 36);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Regristo";
+            this.lblTitulo.Text = "Registro";
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(692, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(615, 10);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(96, 33);
+            this.btnCerrar.Size = new System.Drawing.Size(85, 26);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -60,35 +62,36 @@
             // dgv_Ventas
             // 
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Ventas.Location = new System.Drawing.Point(-1, 161);
-            this.dgv_Ventas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_Ventas.Location = new System.Drawing.Point(-1, 129);
             this.dgv_Ventas.Name = "dgv_Ventas";
             this.dgv_Ventas.RowHeadersWidth = 51;
             this.dgv_Ventas.RowTemplate.Height = 24;
-            this.dgv_Ventas.Size = new System.Drawing.Size(802, 288);
+            this.dgv_Ventas.Size = new System.Drawing.Size(713, 230);
             this.dgv_Ventas.TabIndex = 21;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(98, 114);
+            this.txtID.Location = new System.Drawing.Point(87, 91);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(203, 26);
+            this.txtID.Size = new System.Drawing.Size(181, 22);
             this.txtID.TabIndex = 22;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(12, 120);
+            this.lblId.Location = new System.Drawing.Point(11, 96);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(26, 20);
+            this.lblId.Size = new System.Drawing.Size(21, 17);
             this.lblId.TabIndex = 23;
             this.lblId.Text = "ID";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(339, 114);
+            this.btnBuscar.Location = new System.Drawing.Point(301, 91);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(90, 34);
+            this.btnBuscar.Size = new System.Drawing.Size(80, 27);
             this.btnBuscar.TabIndex = 24;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -96,9 +99,10 @@
             // 
             // btnReiniciar
             // 
-            this.btnReiniciar.Location = new System.Drawing.Point(666, 106);
+            this.btnReiniciar.Location = new System.Drawing.Point(592, 85);
+            this.btnReiniciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReiniciar.Name = "btnReiniciar";
-            this.btnReiniciar.Size = new System.Drawing.Size(90, 34);
+            this.btnReiniciar.Size = new System.Drawing.Size(80, 27);
             this.btnReiniciar.TabIndex = 25;
             this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
@@ -106,9 +110,10 @@
             // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.btnReiniciar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblId);
@@ -116,6 +121,7 @@
             this.Controls.Add(this.dgv_Ventas);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblTitulo);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Registro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);

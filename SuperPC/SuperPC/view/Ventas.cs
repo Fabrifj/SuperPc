@@ -65,6 +65,7 @@ namespace SuperPC
             AñadirDatos añadirDatos = new AñadirDatos("CLIENTE", controllSQL);
             añadirDatos.CODIGO_VENTA = "";
             añadirDatos.ShowDialog();
+
             this.nombre = añadirDatos.Dato1;
             this.nit = añadirDatos.Dato2;
             this.id_cliente = añadirDatos.ID_CLIENTE;
@@ -81,13 +82,14 @@ namespace SuperPC
             
             string fecha = Convert.ToString(System.DateTime.Today.Month) +"/" + Convert.ToString(System.DateTime.Today.Day)
                 + "/" + Convert.ToString(System.DateTime.Today.Year);
-            string[] values = {fecha,"0", id_cliente };
+            lblNit.Text = fecha;
+            string[] values = {"'" + fecha + "'", "1", id_cliente };
             //controllSQL.insertar("VENTA", values);
             
             
            
             string consulta = string.Format("insert into VENTA values({0})",values);
-            controllSQL.consulta_Hard_Code(consulta);
+            controllSQL.insertar("VENTA", values);
             
 
         }
