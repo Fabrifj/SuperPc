@@ -16,9 +16,11 @@ namespace SuperPC.view
 {
     public partial class AñadirDatos : Form
     {
-        // variables enviables
+        // variables VENTA_PRODUCTO
         string ID_CLIENTE="";
         string ID_PRODUCTO = "";
+        string CANTIDAD;
+
         //
 
         public string Dato1 { get; set; }
@@ -76,6 +78,8 @@ namespace SuperPC.view
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
+            string[] values = { ID_CLIENTE, ID_PRODUCTO, CANTIDAD }; 
+            controllSQL.insertar("VENTA_PRODUCTO", values);
             this.Close();
         }
 
@@ -91,7 +95,7 @@ namespace SuperPC.view
             dgv_Productos.DataSource = data;
             categorias = new List<string>(); //En esta lista se guarda las descripciones que vayamos a obtener de categoria
             primaryKey = new List<string>(); //En esta sus codigos
-
+            
             if (titulo == "PRODUCTO")
             {
                 data = controllSQL.select_Simple("CATEGORIA");
