@@ -14,11 +14,12 @@ namespace SuperPC.view
     public partial class Insertar_Datos : Form
     {
         private Consultas consulta;
-        public Insertar_Datos(Consultas consulta, string columna)
+        public Insertar_Datos(Consultas consulta, string columna, string titulo)
         {
             InitializeComponent();
             this.consulta = consulta;
             lbl_Columna.Text = columna;
+            lbl_Titulo.Text = titulo;
         }
 
         private void btn_Aceptar_Click(object sender, EventArgs e)

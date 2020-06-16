@@ -39,26 +39,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 8);
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 20);
+            this.label1.Size = new System.Drawing.Size(182, 36);
             this.label1.TabIndex = 3;
             this.label1.Text = "Manejo de Datos ";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(243, 8);
+            this.lblTitulo.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Location = new System.Drawing.Point(234, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(84, 20);
+            this.lblTitulo.Size = new System.Drawing.Size(108, 36);
             this.lblTitulo.TabIndex = 4;
             this.lblTitulo.Text = "TIPO DE ::";
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Location = new System.Drawing.Point(661, 361);
+            this.btnTerminar.Location = new System.Drawing.Point(588, 289);
+            this.btnTerminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(100, 39);
+            this.btnTerminar.Size = new System.Drawing.Size(89, 31);
             this.btnTerminar.TabIndex = 6;
             this.btnTerminar.Text = "Terminar";
             this.btnTerminar.UseVisualStyleBackColor = true;
@@ -66,9 +69,10 @@
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(661, 251);
+            this.btnAñadir.Location = new System.Drawing.Point(588, 201);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(100, 39);
+            this.btnAñadir.Size = new System.Drawing.Size(89, 31);
             this.btnAñadir.TabIndex = 7;
             this.btnAñadir.Text = "Añadir";
             this.btnAñadir.UseVisualStyleBackColor = true;
@@ -77,24 +81,25 @@
             // dgv_Datos
             // 
             this.dgv_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Datos.Location = new System.Drawing.Point(1, 133);
-            this.dgv_Datos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgv_Datos.Location = new System.Drawing.Point(12, 58);
             this.dgv_Datos.Name = "dgv_Datos";
             this.dgv_Datos.RowHeadersWidth = 51;
             this.dgv_Datos.RowTemplate.Height = 24;
-            this.dgv_Datos.Size = new System.Drawing.Size(636, 317);
+            this.dgv_Datos.Size = new System.Drawing.Size(554, 290);
             this.dgv_Datos.TabIndex = 21;
             // 
             // ManejoDatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.dgv_Datos);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.btnTerminar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManejoDatos";
             this.Text = "ManejoDatos";
             this.Load += new System.EventHandler(this.ManejoDatos_Load);

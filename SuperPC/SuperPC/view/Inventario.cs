@@ -44,7 +44,7 @@ namespace SuperPC
 
         private void Inventario_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -174,7 +174,7 @@ namespace SuperPC.controller
 
                     while (!insertado && lec != PK && !cancelar)//Minetras no inserte el valor o se presione cancelar va a seguir apareciendo la pestaña
                     {
-                        insertar = new Insertar_Datos(this, lec); //Se crea un nuevo forms por cada campo obtenido
+                        insertar = new Insertar_Datos(this, lec, tabla); //Se crea un nuevo forms por cada campo obtenido
                         insertar.ShowDialog();
                         if (dato_Obtenido != "")
                         {

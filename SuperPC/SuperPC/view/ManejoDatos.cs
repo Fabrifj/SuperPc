@@ -17,6 +17,7 @@ namespace SuperPC
     {
         // auxi consultas 
         private DataTable data;
+        private bool pk;
 
         Consultas controllSQL;
         string titulo;
@@ -35,9 +36,9 @@ namespace SuperPC
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            controllSQL.insertar_Manual("PRODUCTO", false);
-            //Agregar agregar = new Agregar(titulo, controllSQL);
-            //agregar.ShowDialog();
+            if(titulo == "PRODUCTO")
+                controllSQL.insertar_Manual(titulo, true);
+            else controllSQL.insertar_Manual(titulo, false);
 
         }
 
@@ -46,6 +47,7 @@ namespace SuperPC
             data = controllSQL.select_Simple(titulo);
 
             dgv_Datos.DataSource = data;
+            dgv_Datos.DataSource
         }
     }
 }
