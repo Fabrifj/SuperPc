@@ -18,6 +18,15 @@ namespace SuperPC
     {
         Consultas consultas;
 
+        // Cadena de texto 
+        private string texto;
+        private int costo;
+        private string nombre = "Nombre del cliente";
+        private string nit=  "nit del cliente ";
+
+    
+
+
         
         public Ventas(Consultas consultas)
         {
@@ -27,19 +36,29 @@ namespace SuperPC
 
         private void Ventas_Load(object sender, EventArgs e)
         {
-
+            lblNit.Text = nit;
+            lblNombre.Text = nombre;
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            AñadirDatos añadirDatos = new AñadirDatos("CLIENTE", consultas);
-            lblNombre.Text= añadirDatos.Dato1;
+            AñadirDatos añadirDatos = new AñadirDatos("CLIENTE", consultas); 
             añadirDatos.ShowDialog();
+            this.nombre = añadirDatos.Dato1;
+            this.nit = añadirDatos.Dato2;
+
+            this.lblNombre.Text = this.nombre;
+            this.lblNit.Text = this.nit;
+            
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
             AñadirDatos añadirDatos = new AñadirDatos("PRODUCTO", consultas);
+
+
+
+
             añadirDatos.ShowDialog();
         }
 

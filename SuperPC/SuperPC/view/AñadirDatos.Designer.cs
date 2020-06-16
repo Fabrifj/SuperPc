@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.dgv_Productos = new System.Windows.Forms.DataGridView();
+            this.lblDato1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Productos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,11 +159,21 @@
             this.dgv_Productos.Size = new System.Drawing.Size(618, 288);
             this.dgv_Productos.TabIndex = 20;
             // 
+            // lblDato1
+            // 
+            this.lblDato1.AutoSize = true;
+            this.lblDato1.Location = new System.Drawing.Point(420, 21);
+            this.lblDato1.Name = "lblDato1";
+            this.lblDato1.Size = new System.Drawing.Size(53, 20);
+            this.lblDato1.TabIndex = 21;
+            this.lblDato1.Text = "Dato1";
+            // 
             // AñadirDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.lblDato1);
             this.Controls.Add(this.dgv_Productos);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
@@ -199,5 +210,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.DataGridView dgv_Productos;
+        private System.Windows.Forms.Label lblDato1;
     }
 }

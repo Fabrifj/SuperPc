@@ -17,12 +17,12 @@ namespace SuperPC.view
     public partial class AñadirDatos : Form
     {
         // variables enviables
-        string id;
+        string id="";
         //
-        string dato1;
-        string dato2;
+       
         public string Dato1 { get; set; }
         public string Dato2 { get; set; }
+        public string Dato3 { get; set; }
 
 
 
@@ -50,13 +50,18 @@ namespace SuperPC.view
             {
                 data = controllSQL.select_Simple_Limitado(titulo, "ID_CLIENTE", id);
 
-                campos = new string[] { "ID_CLIENTE" };
+                campos = new string[] { "NOMBRE_CLIENTE", "CARNET"};
                 data = controllSQL.select_Simple_Limitado(titulo,"ID_CLIENTE",id, campos);
-                dato1 = data.ToString();
+                Dato1 = data.Rows[0]["NOMBRE_CLIENTE"].ToString();
+                Dato2 = data.Rows[0]["CARNET"].ToString();
+                lblDato1.Text = Dato1;
                 dgv_Productos.DataSource = data;
             }
             else
             {
+                
+                //dgv_Productos.DataSource = data
+
 
             }
     }
