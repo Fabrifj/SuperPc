@@ -31,8 +31,8 @@ namespace SuperPC
 
         private void btnPedido_Click(object sender, EventArgs e)
         {
-            Compra compra = new Compra(controllSQL);
-            compra.ShowDialog();
+            Agregar agregar = new Agregar("AGREGAR PEDIDOS", controllSQL);
+            agregar.ShowDialog();
 
         }
 

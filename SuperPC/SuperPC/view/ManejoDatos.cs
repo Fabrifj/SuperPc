@@ -47,7 +47,6 @@ namespace SuperPC
             data = controllSQL.select_Simple(titulo);
 
             dgv_Datos.DataSource = data;
-            dgv_Datos.DataSource
         }
     }
 }
